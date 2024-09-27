@@ -584,23 +584,32 @@ body {
   align-items: center;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   padding: 0;
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
-  border-radius: 4px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-icon {
-  border-radius: 100%;
-  background-color: #e7e9fc;
-  fill: #000000;
-}
 .modal-close-button:hover {
-  fill: #404bbf;
-  stroke: #ffffff;
+  background-color: #4d5ae5;
 }
+.modal-close-icon {
+  fill: #000000;
+  width: 8px;
+  height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-icon:hover {
+  background-color: #4d5ae5;
+  stroke: #000000;
+  fill: #ffffff;
+}
+
 .user-comment {
   resize: none;
 }
@@ -678,5 +687,62 @@ body {
 }
 .user-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.policy-link {
+  text-decoration: underline;
+  line-height: 1.33333;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+.policy-link:focus {
+  border: 1px solid #4d5ae5;
+}
+.custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 8px;
+}
+.modal-form-checkbox:checked + .modal-form-checkbox-label > .custom-checkbox {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+}
+.modal-form-checkbox:focus + .modal-form-checkbox-label > .custom-checkbox {
+  border: 1px solid #4d5ae5;
+}
+.modal-form-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+.modal-form-submit-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  min-width: 169px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 34px;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*===============/Modal window===============*/
